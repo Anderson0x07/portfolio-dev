@@ -13,13 +13,29 @@ export default function Navbar() {
 
     const navigate = useNavigate();
 
+    const handleScroll = (event) => {
+        event.preventDefault();
+        setMobileMenuOpen(false)
+        navigate('/')
+    
+        const targetId = event.target.getAttribute('href').slice(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
+
     return (
         <header className="bg-white">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <a href="#" className="-m-1.5 p-1.5">
-                        <img className="h-28 w-auto" src="/src/assets/logo.png" alt="" />
-                    </a>
+                    <div className="-m-1.5 p-1.5 hover:cursor-pointer" onClick={() => navigate('/')}>
+                        <img  className="h-28 w-auto" src="src/assets/logo.png" alt="" />
+                    </div>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -32,14 +48,14 @@ export default function Navbar() {
                     </button>
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-12">
-                    <a href="#about" className="text-sm font-semibold leading-6 text-gray-900">
+                    <a href="#about" className="text-sm font-semibold leading-6 text-gray-900" onClick={handleScroll}>
                         About <span aria-hidden="true">&rarr;</span>
                     </a>
 
-                    <a href="#projects" className="text-sm font-semibold leading-6 text-gray-900">
+                    <a href="#projects" className="text-sm font-semibold leading-6 text-gray-900" onClick={handleScroll}>
                         Projects
                     </a>
-                    <a className="text-sm font-semibold leading-6 text-gray-900 hover:cursor-pointer" onClick={() => navigate('/contact')}>
+                    <a  href="#contact" className="text-sm font-semibold leading-6 text-gray-900 hover:cursor-pointer" onClick={handleScroll}>
                         Contact
                     </a>
                 </div>
@@ -48,12 +64,12 @@ export default function Navbar() {
                 <div className="fixed inset-0 z-10" />
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
-                        <a href="#" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Your Company</span>
+                        <a className="-m-1.5 p-1.5" onClick={() => navigate('/')}>
                             <img
                                 className="h-8 w-auto"
-                                src="/src/assets/logo.png"
+                                src="src/assets/logo.png"
                                 alt="logo"
+                                
                             />
                         </a>
                         <button
@@ -68,13 +84,13 @@ export default function Navbar() {
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="py-6">
-                                <a href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                <a href="#about" onClick={handleScroll} className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                     About
                                 </a>
-                                <a href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                <a href="#projects" onClick={handleScroll} className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                     Projects
                                 </a>
-                                <a href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                <a href="#contact" onClick={handleScroll} className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                     Contact
                                 </a>
                             </div>

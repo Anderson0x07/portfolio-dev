@@ -38,7 +38,7 @@ function Footer() {
     return (
 
         <>
-            <Container maxWidth sx={{ backgroundColor: '#6E07F3', color: 'white', pb: 5 }} >
+            <Container maxWidth='' sx={{ backgroundColor: '#6E07F3', color: 'white', pb: 5}} >
 
                 <Stack
                     direction="column"
@@ -46,7 +46,7 @@ function Footer() {
                     alignItems="center"
                     spacing={4}
                 >
-                    <img className="h-28 w-auto mt-10" src="/src/assets/logo-footer.png" alt="" />
+                    <img className="h-28 w-auto mt-10" src="src/assets/logo-footer.png" alt="" />
 
                     <Typography my={10} variant='h6'>
                         Living, learning, & leveling up one day at a time.

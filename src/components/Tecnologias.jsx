@@ -2,16 +2,15 @@ export default function Tecnologias() {
 
   const tecnologias = [
     { url: 'js.png', alt: 'js' },
-    { url: 'html.png', alt: 'html' },
-    { url: 'css.png', alt: 'css' },
     { url: 'react.png', alt: 'react' },
-    { url: 'angular.svg', alt: 'angular' },
+    { url: 'css.png', alt: 'css' },
+    { url: 'html.png', alt: 'html' },
+    { url: 'java.png', alt: 'java' },
     { url: 'spring.png', alt: 'spring' },
     { url: 'mui.png', alt: 'mui' },
     { url: 'bootstrap.png', alt: 'bootstrap' },
-    { url: 'mysql.png', alt: 'mysql' },
     { url: 'github.png', alt: 'github' },
-
+    { url: 'angular.svg', alt: 'angular' },
   ]
 
   return (
@@ -22,9 +21,9 @@ export default function Tecnologias() {
           {
             tecnologias.map((tecnologia) => {
               return (
-                <img
+                <img key={tecnologia.alt}
                   className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                  src={`/src/assets/${tecnologia.url}`}
+                  src={`src/assets/${tecnologia.url}`}
                   alt={tecnologia.alt}
                   width={158}
                   height={48}

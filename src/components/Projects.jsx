@@ -1,72 +1,44 @@
-import { Box, Card, Container, Grid, Stack, Typography, styled } from "@mui/material";
+import { Container, Grid, } from "@mui/material";
+import Project from "./Project";
 
-const ImagenEstilo = styled('img')({
-    top: 0,
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    position: 'absolute',
-    ':hover': {
-        transform: 'scale(1.1)',
-    },
-});
+
+
 
 const Projects = () => {
+
     return (
-        <Container fixed>
-            <Grid container spacing={3} sx={{my: 5}}>
+        <Container>
+            <Grid container spacing={3} sx={{ my: 5 }}>
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card>
-                        <Box sx={{ pt: '100%', position: 'relative' }}>
-                            <ImagenEstilo src={"/src/assets/bodyhealth.png"} onClick={() => console.log("Hola mundo")} />
-                        </Box>
-                        <Stack spacing={2} sx={{ p: 3 }}>
-                            <Stack direction="row" alignItems="center" justifyContent="space-between">
-                                <Typography variant="h6" >
-                                    Bodyhealth web
-                                </Typography>
-                            </Stack>
-                        </Stack>
-                    </Card>
+                    <Project
+                        nombre="Bodyhealth Web"
+                        github={['https://github.com/Anderson0x07/bodyhealth-backend/tree/development', 'https://github.com/Anderson0x07/bodyhealth-frontend/tree/development']}
+                        public="https://bodyhealth-web.netlify.app/"
+                        img="bodyhealth.png"
+                        tecs={['react-w.png', 'spring-boot.png']}
+                    />
+                </Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    <Project
+                        nombre="Tasks App"
+                        github={["https://github.com/Anderson0x07/task-app-react"]}
+                        public="https://anderson0x07.github.io/task-app-react/"
+                        img="tasks-app.png"
+                        tecs={['react-w.png', 'js.png']}
+                    />
 
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card>
-                        <Box sx={{ pt: '100%', position: 'relative' }}>
-                            <ImagenEstilo src={"/src/assets/tasks-app.png"} onClick={() => console.log("Hola mundo")} />
-                        </Box>
-                        <Stack spacing={2} sx={{ p: 3 }}>
-                            <Stack direction="row" alignItems="center" justifyContent="space-between">
-                                <Typography variant="h6">
-                                    Tasks App
-                                </Typography>
-                                <Typography variant="caption">
-                                    React, JS
-                                </Typography>
-                            </Stack>
-                        </Stack>
-                    </Card>
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <Card>
-                        <Box sx={{ pt: '100%', position: 'relative' }}>
-                            <ImagenEstilo src={"/src/assets/coinmarket-app.png"} onClick={() => console.log("Hola mundo")} />
-                        </Box>
-                        <Stack spacing={2} sx={{ p: 3 }}>
-                            <Stack direction="row" alignItems="center" justifyContent="space-between">
-                                <Typography variant="h6">
-                                    Coinmarket App
-                                </Typography>
-                                <Typography variant="caption">
-                                    Angular, MUI
-                                </Typography>
-                            </Stack>
-                        </Stack>
-                    </Card>
+                    <Project
+                        nombre="Coinmarket App"
+                        github={["https://github.com/Anderson0x07/coinmarket-app-angular"]}
+                        public="https://coinmarket-app.netlify.app/"
+                        img="coinmarket-app.png"
+                        tecs={['angular.png', 'mui.png']}
+                    />
+
                 </Grid>
             </Grid>
-
-
         </Container>
     );
 };
