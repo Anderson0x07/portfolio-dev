@@ -18,7 +18,7 @@ const Skills = ({ darkTheme }) => {
                                 img="bodyhealth.png"
                                 tecs={
                                     [
-                                        { nombre: 'React.js', icono: 'react-w.png' },
+                                        { nombre: 'React.js', icono: `${darkTheme ? 'react-dark.webp' : 'react.png'}` },
                                         { nombre: 'Springboot', icono: 'spring-boot.png' },
                                         { nombre: 'Material UI', icono: 'mui.png' },
                                     ]
@@ -34,7 +34,7 @@ const Skills = ({ darkTheme }) => {
                                 img="tasks-app.png"
                                 tecs={
                                     [
-                                        { nombre: 'React.js', icono: 'react-w.png' },
+                                        { nombre: 'React.js', icono: `${darkTheme ? 'react-dark.webp' : 'react.png'}` },
                                         { nombre: 'Javascript', icono: 'js.png' },
                                         { nombre: 'Tailwind', icono: 'tailwind.png' },
                                     ]

@@ -72,13 +72,13 @@ const Project = (props) => {
                     <h2 className="text-xl font-bold">{props.nombre}</h2>
                     <div style={{ display: 'flex' }}>
                         <Tooltip title={props.tecs[0].nombre} arrow>
-                            <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[0].icono}`} sx={{ width: 24, height: 24, mr: 1, bgcolor: "black" }} variant="square" />
+                            <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[0].icono}`} sx={{ width: 28, height: 28, mr: 1,  }} variant='rounded' />
                         </Tooltip>
                         <Tooltip title={props.tecs[1].nombre} arrow>
-                            <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[1].icono}`} sx={{ width: 24, height: 24, mr: 1, bgcolor: "black" }} variant="square" />
+                            <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[1].icono}`} sx={{ width: 28, height: 28, mr: 1,  }} variant='rounded'/>
                         </Tooltip>
                         <Tooltip title={props.tecs[2].nombre} arrow>
-                            <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[2].icono}`} sx={{ width: 24, height: 24, bgcolor: "black" }} variant="square" />
+                            <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[2].icono}`} sx={{ width: 28, height: 28,  }} variant='rounded'/>
                         </Tooltip>
                     </div>
                 </Stack>

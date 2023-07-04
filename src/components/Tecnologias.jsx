@@ -3,12 +3,12 @@ import { Tooltip } from "@mui/material"
 const Tecnologias = ({ darkTheme }) => {
 
   const tecnologias = [
-    { url: 'react.png', alt: 'React.js' },
+    { url: `${darkTheme ? 'react-dark.webp' : 'react.png'}`, alt: 'React.js' },
     { url: 'js.png', alt: 'Javascript' },
-    { url: 'css.png', alt: 'CSS' },
+    { url: 'css.svg', alt: 'CSS' },
     { url: 'html.png', alt: 'HTML' },
     { url: `${darkTheme ? 'java-dark.png' : 'java.png'}`, alt: 'Java' },
-    { url: `${darkTheme ? 'github-dark.png' : 'github.png'}`, alt: 'Github' },
+    { url: `${darkTheme ? 'github-dark.webp' : 'github.png'}`, alt: 'Github' },
     { url: 'mui.png', alt: 'Material UI' },
     { url: 'bootstrap.png', alt: 'Bootstrap' },
     { url: 'spring-boot.png', alt: 'Springboot' },
