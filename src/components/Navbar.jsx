@@ -34,7 +34,7 @@ export default function Navbar() {
             <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <div className="-m-1.5 p-1.5 hover:cursor-pointer" onClick={() => navigate('/')}>
-                        <img  className="h-28 w-auto" src="src/assets/logo.png" alt="" />
+                        <img  className="h-28 w-auto" src="https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/logo.png" alt="" />
                     </div>
                 </div>
                 <div className="flex lg:hidden">
@@ -67,7 +67,7 @@ export default function Navbar() {
                         <a className="-m-1.5 p-1.5" onClick={() => navigate('/')}>
                             <img
                                 className="h-8 w-auto"
-                                src="src/assets/logo.png"
+                                src="https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/logo.png"
                                 alt="logo"
                                 
                             />

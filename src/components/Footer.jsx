@@ -46,7 +46,7 @@ function Footer() {
                     alignItems="center"
                     spacing={4}
                 >
-                    <img className="h-28 w-auto mt-10" src="src/assets/logo-footer.png" alt="" />
+                    <img className="h-28 w-auto mt-10" src="https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/logo-footer.png" alt="" />
 
                     <Typography my={10} variant='h6'>
                         Living, learning, & leveling up one day at a time.

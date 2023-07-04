@@ -55,7 +55,7 @@ function Project(props) {
         <Card>
             <Box sx={{ pt: '100%', position: 'relative' }} onMouseEnter={() => setMostrarBoton(true)} onMouseLeave={() => setMostrarBoton(false)}>
                 <Contenedor>
-                    <ImagenEstilo src={`src/assets/${props.img}`} />
+                    <ImagenEstilo src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.img}`} />
 
                     <Botones mostrar={mostrarBoton}>
                         <Stack direction="row" alignItems="center" justifyContent="space-between">
@@ -74,8 +74,8 @@ function Project(props) {
                 <Stack direction="row" alignItems="center" justifyContent="space-between">
                     <h2 className="text-xl font-bold">{props.nombre}</h2>
                     <div style={{ display: 'flex' }}>
-                        <Avatar src={`src/assets/${props.tecs[0]}`} sx={{ width: 24, height: 24, mr: 1, bgcolor: "black" }} variant="square" />
-                        <Avatar src={`src/assets/${props.tecs[1]}`} sx={{ width: 24, height: 24, bgcolor: "black" }} variant="square" />
+                        <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[0]}`} sx={{ width: 24, height: 24, mr: 1, bgcolor: "black" }} variant="square" />
+                        <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[1]}`} sx={{ width: 24, height: 24, bgcolor: "black" }} variant="square" />
 
                     </div>
                 </Stack>

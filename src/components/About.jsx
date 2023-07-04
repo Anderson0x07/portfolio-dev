@@ -15,7 +15,7 @@ const About = () => {
                             I like to build robust and scalable products with great user experiences.
                         </p>
                         <div className="mx-auto max-w-2xl sm:text-center mt-20">
-                            <img src="src/assets/hero-devices.svg" alt="" />
+                            <img src="https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/hero-devices.svg" alt="" />
                         </div>
                     </div>
                 </div>

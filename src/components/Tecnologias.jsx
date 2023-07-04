@@ -23,7 +23,7 @@ export default function Tecnologias() {
               return (
                 <img key={tecnologia.alt}
                   className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                  src={`src/assets/${tecnologia.url}`}
+                  src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${tecnologia.url}`}
                   alt={tecnologia.alt}
                   width={158}
                   height={48}
