@@ -1,5 +1,5 @@
 import { GitHub, Public } from '@mui/icons-material';
-import { Avatar, Box, Card, Stack, styled } from '@mui/material'
+import { Avatar, Box, Card, Stack, Tooltip, styled } from '@mui/material'
 import React, { useState } from 'react'
 
 const Contenedor = styled('div')({
@@ -17,9 +17,9 @@ const ImagenEstilo = styled('img')({
     width: '100%',
     height: '100%',
     objectFit: 'cover',
-    opacity: 1, // Ajusta la opacidad inicial de la imagen
-    transition: 'opacity 0.3s ease', // Transición de la opacidad de la imagen
-    [`${Contenedor}:hover &`]: { // Solo aplica la opacidad al hacer hover en el Contenedor
+    opacity: 1,
+    transition: 'opacity 0.3s ease',
+    [`${Contenedor}:hover &`]: {
         opacity: 0.4,
     },
 
@@ -35,27 +35,24 @@ const Botones = styled('div')(({ mostrar }) => ({
     width: 250,
 }));
 
-function Project(props) {
+const Project = (props) => {
 
     const [mostrarBoton, setMostrarBoton] = useState(false);
 
     const handleShowPage = (arr) => {
-
         if (arr.length > 1) {
             window.open(arr[0], '_blank')
             window.open(arr[1], '_blank')
         } else {
             window.open(arr[0], '_blank')
         }
-
     }
 
-
     return (
-        <Card>
+        <Card sx={{ bgcolor: `${props.darkTheme ? '#000027' : ''}`, color: `${props.darkTheme ? 'white' : ''}` }}>
             <Box sx={{ pt: '100%', position: 'relative' }} onMouseEnter={() => setMostrarBoton(true)} onMouseLeave={() => setMostrarBoton(false)}>
                 <Contenedor>
-                    <ImagenEstilo src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.img}`} />
+                    <ImagenEstilo loading='lazy' src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.img}`} />
 
                     <Botones mostrar={mostrarBoton}>
                         <Stack direction="row" alignItems="center" justifyContent="space-between">
@@ -74,9 +71,15 @@ function Project(props) {
                 <Stack direction="row" alignItems="center" justifyContent="space-between">
                     <h2 className="text-xl font-bold">{props.nombre}</h2>
                     <div style={{ display: 'flex' }}>
-                        <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[0]}`} sx={{ width: 24, height: 24, mr: 1, bgcolor: "black" }} variant="square" />
-                        <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[1]}`} sx={{ width: 24, height: 24, bgcolor: "black" }} variant="square" />
-
+                        <Tooltip title={props.tecs[0].nombre} arrow>
+                            <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[0].icono}`} sx={{ width: 24, height: 24, mr: 1, bgcolor: "black" }} variant="square" />
+                        </Tooltip>
+                        <Tooltip title={props.tecs[1].nombre} arrow>
+                            <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[1].icono}`} sx={{ width: 24, height: 24, mr: 1, bgcolor: "black" }} variant="square" />
+                        </Tooltip>
+                        <Tooltip title={props.tecs[2].nombre} arrow>
+                            <Avatar src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${props.tecs[2].icono}`} sx={{ width: 24, height: 24, bgcolor: "black" }} variant="square" />
+                        </Tooltip>
                     </div>
                 </Stack>
             </Stack>
@@ -84,4 +87,4 @@ function Project(props) {
     )
 }
 
-export default Project
+export default Project;

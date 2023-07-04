@@ -1,28 +1,34 @@
-import { ChatOutlined } from '@mui/icons-material'
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Send } from '@mui/icons-material'
 
-function Interesed() {
+const Interesed = ({ darkTheme }) => {
 
-    const navigate = useNavigate();
+    const email = 'andersonadrianorro@ufps.edu.co';
+
+    const sendEmail = () => {
+
+        const mailtoUrl = `mailto:${email}`
+
+        window.open(mailtoUrl);
+    };
 
     return (
-        <section id='contact' className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
-            <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
-            <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
+        <section id='contact' className={`${darkTheme ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} relative isolate overflow-hidden px-6 py-12 sm:py-32 lg:px-8`}>
             <div className="mx-auto max-w-2xl lg:max-w-4xl">
-                <h2 className="text-center text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl mb-8">Interested in collaborating with me?</h2>
+                <h2 className="text-center text-2xl font-bold tracking-tight  sm:text-3xl mb-8">Interested in collaborating with me?</h2>
 
-                <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                <blockquote className="text-center text-xl font-semibold leading-8  sm:text-2xl sm:leading-9">
                     <p className="mb-8">
                         I’m always open to discussing product design work or partnership opportunities.
                     </p>
-                    <button className="rounded-full text-violet-700 hover:bg-violet-700 hover:text-white py-4 px-8 border-2 border-violet-700" onClick={()=>navigate("/contact")}>
-                        <ChatOutlined/> Start a conversation
-                    </button>
+                    <div class="flex gap-2">
+                        <input type="text" disabled="" class="bg-black/5 dark:bg-white/5 w-full py-1.5 px-3 rounded-lg grid place-items-center text-slate-600 dark:text-slate-300" value={email}></input>
+
+                        <button className={`rounded-3xl border-2 py-2 px-8 mx-4 ${darkTheme ? 'text-white bg-violet-900 hover:bg-violet-700 hover:text-white border-violet-900' : 'text-violet-700 hover:bg-violet-700 hover:text-white border-violet-700'}`} onClick={() => sendEmail()}>
+                            <Send sx={{ fontSize: '2.5rem' }} />
+                        </button>
+
+                    </div>
                 </blockquote>
-
-
             </div>
         </section>
     )
