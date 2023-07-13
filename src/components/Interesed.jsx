@@ -2,7 +2,7 @@ import { Send } from '@mui/icons-material'
 
 const Interesed = ({ darkTheme }) => {
 
-    const email = 'andersonadrianorro@ufps.edu.co';
+    const email = 'anderson07rolon@gmail.com';
 
     const sendEmail = () => {
 
@@ -20,11 +20,11 @@ const Interesed = ({ darkTheme }) => {
                     <p className="mb-8">
                         I’m always open to discussing product design work or partnership opportunities.
                     </p>
-                    <div class="flex gap-2">
-                        <input type="text" disabled="" class="bg-black/5 dark:bg-white/5 w-full py-1.5 px-3 rounded-lg grid place-items-center text-slate-600 dark:text-slate-300" value={email}></input>
+                    <div className="flex gap-2">
+                        <input type="text" readOnly className={`${darkTheme ? 'bg-slate-600 text-white border-white' : 'text-slate-600'} bg-black/5 w-full py-1.5 px-3 rounded-lg grid place-items-center  `} value={email}></input>
 
-                        <button className={`rounded-3xl border-2 py-2 px-8 mx-4 ${darkTheme ? 'text-white bg-violet-900 hover:bg-violet-700 hover:text-white border-violet-900' : 'text-violet-700 hover:bg-violet-700 hover:text-white border-violet-700'}`} onClick={() => sendEmail()}>
-                            <Send sx={{ fontSize: '2.5rem' }} />
+                        <button className={`rounded-3xl border-2 py-2 px-4 mx-2 ${darkTheme ? 'text-white bg-violet-900 hover:bg-violet-700 hover:text-white border-violet-900' : 'text-violet-700 hover:bg-violet-700 hover:text-white border-violet-700'}`} onClick={() => sendEmail()}>
+                            <Send sx={{ fontSize: '2 rem' }} />
                         </button>
 
                     </div>

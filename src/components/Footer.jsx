@@ -7,7 +7,6 @@ const Footer = () => {
 
         const socials = [
             { id: 'Email', logo: <Email />, url: 'mailto:andersonadrianorro@ufps.edu.co' },
-            { id: 'Web', logo: <Public />, url: 'https://anderson-orozco.netlify.com' },
             { id: 'LinkedIn', logo: <LinkedIn />, url: 'https://www.linkedin.com/in/anderson-orozco/' },
             { id: 'GitHub', logo: <GitHub />, url: 'https://github.com/Anderson0x07' }
         ]
