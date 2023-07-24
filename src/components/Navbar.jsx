@@ -36,11 +36,11 @@ const Navbar = ({ darkTheme, toggleTheme }) => {
     }
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-10 backdrop-filter backdrop-blur-md  ${darkTheme ? 'bg-gray-800 text-white bg-opacity-95' : 'bg-white text-gray-900 bg-opacity-70'} `}>
+        <header className={`fixed top-0 left-0 right-0 z-10 py-3 backdrop-filter backdrop-blur-md  ${darkTheme ? 'bg-gray-800 text-white bg-opacity-90' : 'bg-white text-gray-900 bg-opacity-70'} `}>
             <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <div className="-m-1.5 p-1.5 hover:cursor-pointer" onClick={() => navigate('/')}>
-                        <img className="h-28 w-auto" src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${darkTheme ? 'logo-footer.png' : 'logo.png'}`} alt="" />
+                    <div className="hover:cursor-pointer" onClick={() => navigate('/')}>
+                        <img className="h-20 w-auto" src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${darkTheme ? 'logo-footer.png' : 'logo.png'}`} alt="" />
                     </div>
                 </div>
                 <div className="flex lg:hidden">

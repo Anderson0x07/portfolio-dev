@@ -1,12 +1,12 @@
 import { useState } from "react"
 import About from "../components/About"
 import Footer from "../components/Footer"
-import Info from "../components/Info"
-import Interesed from "../components/Interesed"
-import Navbar from "../components/Navbar"
 import Skills from "../components/Skills"
+import Contact from "../components/Contact"
+import Navbar from "../components/Navbar"
 import Tecnologias from "../components/Tecnologias"
 import { ArrowUpward } from "@mui/icons-material"
+import Projects from "../components/Projects"
 
 function Home() {
 
@@ -25,19 +25,18 @@ function Home() {
 
     return (
         <>
-
-            <Navbar className='navbar' darkTheme={darkTheme} toggleTheme={toggleTheme} />
+            <Navbar darkTheme={darkTheme} toggleTheme={toggleTheme} />
             <About darkTheme={darkTheme} />
+            <Projects darkTheme={darkTheme} />
             <Skills darkTheme={darkTheme} />
-            <Info darkTheme={darkTheme} />
             <Tecnologias darkTheme={darkTheme} />
-            <Interesed darkTheme={darkTheme} />
+            <Contact darkTheme={darkTheme} />
             <Footer />
 
             <button id="arrowUp" className="scroll-to-top" onClick={scrollToTop}>
                 <ArrowUpward className="scroll-to-top-icon" />
             </button>
-        </>
+        </> 
     )
 }
 
