@@ -6,7 +6,9 @@ import { ContactPageTwoTone, ContactsTwoTone, DarkMode, InfoTwoTone, StarsRounde
 import { IconButton } from '@mui/material'
 import { useTheme } from '../context/Context'
 
-const urlCv = 'https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/CV_Anderson-Orozco.pdf'
+const urlCv = 'https://drive.google.com/file/d/1ElKOKWN0XHyW_jkZrSoT8Vdq9RU0S1qq/view?usp=sharing'
+
+const urlImg = 'https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/'
 
 const Navbar = () => {
   const { darkTheme, toggleTheme } = useTheme()
@@ -43,7 +45,7 @@ const Navbar = () => {
       <nav className='mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8' aria-label='Global'>
         <div className='flex lg:flex-1'>
           <div className='hover:cursor-pointer' onClick={() => navigate('/')}>
-            <img className='h-20 w-auto' src={'/src/assets/' + (darkTheme ? 'logo-footer.png' : 'logo.png')} alt='Navbar img' />
+            <img className='h-20 w-auto' src={urlImg + (darkTheme ? 'logo-footer.webp' : 'logo.webp')} alt='Navbar img' />
           </div>
         </div>
         <div className='flex lg:hidden'>
@@ -56,24 +58,24 @@ const Navbar = () => {
           </button>
         </div>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-12 '>
-          <a href='#about' className='text-lg font-semibold leading-6 ' onClick={handleScroll}>
+          <a href='#about' className='swing text-lg font-semibold leading-6 ' onClick={handleScroll}>
             About <span aria-hidden='true'>&rarr;</span>
           </a>
-          <a href='#projects' className='text-lg font-semibold leading-6 ' onClick={handleScroll}>
+          <a href='#projects' className='swing text-lg font-semibold leading-6 ' onClick={handleScroll}>
             Projects
           </a>
-          <a href='#contact' className='text-lg font-semibold leading-6 ' onClick={handleScroll}>
+          <a href='#contact' className='swing text-lg font-semibold leading-6 ' onClick={handleScroll}>
             Contact
           </a>
 
         </div>
         <div className='hidden lg:flex justify-end lg:gap-x-12 ml-10'>
-          <IconButton onClick={toggleTheme} style={{ color: `${darkTheme ? 'white' : ''}` }}>
+          <IconButton onClick={toggleTheme} sx={{ color: `${darkTheme ? 'white' : ''}` }}>
             {darkTheme ? <DarkMode sx={{ fontSize: '2rem' }} /> : <WbSunnyTwoTone sx={{ fontSize: '2rem' }} />}
           </IconButton>
 
           <button
-            className={`text-lg font-semibold rounded-full ${darkTheme ? 'text-white bg-violet-900 hover:bg-violet-700 hover:text-white py-2 px-4 border-2 border-violet-900' : 'text-violet-700 hover:bg-violet-700 hover:text-white py-2 px-4 border-2 border-violet-700'} `}
+            className={`pulse text-lg font-semibold rounded-full ${darkTheme ? 'text-white bg-violet-900 hover:bg-violet-700 hover:text-white py-2 px-4 border-2 border-violet-900' : 'text-violet-700 hover:bg-violet-700 hover:text-white py-2 px-4 border-2 border-violet-700'} `}
             onClick={() => window.open(urlCv, '_blank')}
           >
             <ContactPageTwoTone /> Resume
@@ -88,7 +90,7 @@ const Navbar = () => {
             <a className='-m-1.5 p-1.5' onClick={() => navigate('/')}>
               <img
                 className='h-8 w-auto'
-                src={`https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/${darkTheme ? 'logo-footer.png' : 'logo.png'}`}
+                src={urlImg + (darkTheme ? 'logo-footer.webp' : 'logo.webp')}
                 alt='logo'
               />
             </a>

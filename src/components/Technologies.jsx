@@ -1,20 +1,22 @@
 import { Tooltip } from '@mui/material'
 import { useTheme } from '../context/Context'
 
+const urlImg = 'https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/'
+
 const Technologies = () => {
   const { darkTheme } = useTheme()
 
   const technologies = [
-    { url: `${darkTheme ? 'react-dark.webp' : 'react.png'}`, alt: 'React.js' },
-    { url: 'js.png', alt: 'Javascript' },
+    { url: `${darkTheme ? 'react-dark.webp' : 'react.webp'}`, alt: 'React.js' },
+    { url: 'js.webp', alt: 'Javascript' },
     { url: 'css.svg', alt: 'CSS' },
-    { url: 'html.png', alt: 'HTML' },
-    { url: `${darkTheme ? 'java-dark.png' : 'java.png'}`, alt: 'Java' },
-    { url: `${darkTheme ? 'github-dark.webp' : 'github.png'}`, alt: 'Github' },
-    { url: 'mui.png', alt: 'Material UI' },
-    { url: 'bootstrap.png', alt: 'Bootstrap' },
-    { url: 'spring-boot.png', alt: 'Springboot' },
-    { url: 'angular.png', alt: 'Angular' }
+    { url: 'html.webp', alt: 'HTML' },
+    { url: `${darkTheme ? 'java-dark.webp' : 'java.webp'}`, alt: 'Java' },
+    { url: `${darkTheme ? 'github-dark.webp' : 'github.webp'}`, alt: 'Github' },
+    { url: 'mui.webp', alt: 'Material UI' },
+    { url: 'bootstrap.webp', alt: 'Bootstrap' },
+    { url: 'spring-boot.webp', alt: 'Springboot' },
+    { url: 'angular.webp', alt: 'Angular' }
   ]
 
   return (
@@ -35,7 +37,7 @@ const Technologies = () => {
                   loading='lazy'
                   key={technology.alt}
                   className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
-                  src={'/src/assets/' + technology.url}
+                  src={urlImg + technology.url}
                   alt={technology.alt}
                 />
               </Tooltip>

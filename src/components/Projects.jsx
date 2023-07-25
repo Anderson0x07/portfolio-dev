@@ -18,12 +18,12 @@ const Projects = () => {
                 title='Bodyhealth Web'
                 github={['https://github.com/Anderson0x07/bodyhealth-backend/tree/development', 'https://github.com/Anderson0x07/bodyhealth-frontend/tree/development']}
                 live='https://bodyhealth-web.netlify.app/'
-                img='bodyhealth.png'
+                img='bodyhealth.webp'
                 tech={
                     [
-                      { nombre: 'React.js', icono: `${darkTheme ? 'react-dark.webp' : 'react.png'}` },
-                      { nombre: 'Springboot', icono: 'spring-boot.png' },
-                      { nombre: 'Material UI', icono: 'mui.png' }
+                      { nombre: 'React.js', icono: `${darkTheme ? 'react-dark.webp' : 'react.webp'}` },
+                      { nombre: 'Springboot', icono: 'spring-boot.webp' },
+                      { nombre: 'Material UI', icono: 'mui.webp' }
                     ]
                 }
                 darkTheme={darkTheme}
@@ -34,12 +34,12 @@ const Projects = () => {
                 title='Tasks App MERN'
                 github={['https://github.com/Anderson0x07/tasks-auth']}
                 live='https://tasks-app-express.netlify.app/'
-                img='tasks-auth.png'
+                img='tasks-auth.webp'
                 tech={
                     [
-                      { nombre: 'React JS', icono: `${darkTheme ? 'react-dark.webp' : 'react.png'}` },
-                      { nombre: 'Node JS', icono: 'node.png' },
-                      { nombre: 'MongoDB', icono: 'mongo.png' }
+                      { nombre: 'React JS', icono: `${darkTheme ? 'react-dark.webp' : 'react.webp'}` },
+                      { nombre: 'Node JS', icono: 'node.webp' },
+                      { nombre: 'MongoDB', icono: 'mongo.webp' }
                     ]
                 }
                 darkTheme={darkTheme}
@@ -51,12 +51,12 @@ const Projects = () => {
                 title='Expense-Income Manager'
                 github={['https://github.com/Anderson0x07/expense-manager']}
                 live='https://expense-income-manager.netlify.app/'
-                img='expense-manager.png'
+                img='expense-manager.webp'
                 tech={
                     [
-                      { nombre: 'React JS', icono: `${darkTheme ? 'react-dark.webp' : 'react.png'}` },
-                      { nombre: 'Node JS', icono: 'node.png' },
-                      { nombre: 'Tailwind', icono: 'tailwind.png' }
+                      { nombre: 'React JS', icono: `${darkTheme ? 'react-dark.webp' : 'react.webp'}` },
+                      { nombre: 'Node JS', icono: 'node.webp' },
+                      { nombre: 'Tailwind', icono: 'tailwind.webp' }
                     ]
                 }
                 darkTheme={darkTheme}
@@ -68,12 +68,12 @@ const Projects = () => {
                 title='Coinmarket App'
                 github={['https://github.com/Anderson0x07/coinmarket-app-angular']}
                 live='https://coinmarket-app.netlify.app/'
-                img='coinmarket-app.png'
+                img='coinmarket-app.webp'
                 tech={
                     [
-                      { nombre: 'Angular', icono: 'angular.png' },
+                      { nombre: 'Angular', icono: 'angular.webp' },
                       { nombre: 'TypeScript', icono: 'typescript.svg' },
-                      { nombre: 'Material UI', icono: 'mui.png' }
+                      { nombre: 'Material UI', icono: 'mui.webp' }
                     ]
                 }
                 darkTheme={darkTheme}
@@ -85,12 +85,12 @@ const Projects = () => {
                 title='Tasks App'
                 github={['https://github.com/Anderson0x07/task-app-react']}
                 live='https://anderson0x07.github.io/task-app-react/'
-                img='tasks-app.png'
+                img='tasks-app.webp'
                 tech={
                     [
-                      { nombre: 'React.js', icono: `${darkTheme ? 'react-dark.webp' : 'react.png'}` },
-                      { nombre: 'JavaScript', icono: 'js.png' },
-                      { nombre: 'Tailwind', icono: 'tailwind.png' }
+                      { nombre: 'React.js', icono: `${darkTheme ? 'react-dark.webp' : 'react.webp'}` },
+                      { nombre: 'JavaScript', icono: 'js.webp' },
+                      { nombre: 'Tailwind', icono: 'tailwind.webp' }
                     ]
                 }
                 darkTheme={darkTheme}

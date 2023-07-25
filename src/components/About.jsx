@@ -1,4 +1,5 @@
 import { useTheme } from '../context/Context'
+const urlImg = 'https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/'
 
 const About = () => {
   const { darkTheme } = useTheme()
@@ -17,7 +18,7 @@ const About = () => {
             I like to build robust and scalable products with great user experiences.
           </p>
           <div className='mx-auto max-w-2xl mt-20'>
-            <img src='/src/assets/hero-devices.svg' alt='About img' />
+            <img src={urlImg + 'hero-devices.svg'} alt='About img' />
           </div>
         </div>
       </div>
