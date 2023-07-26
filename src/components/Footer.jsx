@@ -23,12 +23,7 @@ const SocialButtons = () => {
   ]
 
   return (
-    <Stack
-      direction='row'
-      justifyContent='center'
-      alignItems='center'
-      spacing={4}
-    >
+    <div className='flex justify-center items-center gap-8'>
       {socials.map((item) => {
         return (
           <button
@@ -40,7 +35,7 @@ const SocialButtons = () => {
           </button>
         )
       })}
-    </Stack>
+    </div>
   )
 }
 
@@ -55,6 +50,7 @@ const Footer = () => {
         justifyContent='center'
         alignItems='center'
         spacing={4}
+        className='text-center'
       >
         <img
           loading='lazy'
