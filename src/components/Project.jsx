@@ -28,7 +28,7 @@ const Project = ({ title, img, tech, github, live, darkTheme }) => {
 
     <div className={`px-1 pt-14 mx-auto lg:px-8 ${darkTheme ? 'text-white' : ''}`}>
 
-      <ImagenEstilo loading='lazy' src={urlImg + img} />
+      <ImagenEstilo loading='lazy' src={urlImg + img} alt={title} />
 
       <div className='flex justify-between items-center pt-4'>
 
@@ -44,6 +44,7 @@ const Project = ({ title, img, tech, github, live, darkTheme }) => {
                   <img
                     src={urlImg + item.icono}
                     className='max-h-8 object-contain mx-0.5'
+                    alt={item.nombre}
                   />
                 </Tooltip>
               )

@@ -19,11 +19,13 @@ const Contact = () => {
         <blockquote className='sm:text-center text-xl font-semibold leading-8  sm:text-2xl sm:leading-9'>
 
           <div className='flex gap-2'>
-            <input type='text' readOnly className={`${darkTheme ? 'bg-slate-600 text-white border-white' : 'text-slate-600'} bg-black/5 w-full py-1.5 px-3 rounded-lg grid place-items-center  `} value={email} />
+            <label htmlFor='email' className='flex w-full'>
+              <input type='text' id='email' readOnly className={`${darkTheme ? 'bg-slate-600 text-white border-white' : 'text-slate-600'} bg-black/5 w-full py-1.5 px-3 rounded-lg grid place-items-center  `} value={email} />
 
-            <button className={`flex rounded-xl border-2 py-2 px-4 mx-2 ${darkTheme ? 'text-white bg-violet-900 hover:bg-violet-700 hover:text-white border-violet-900' : 'text-violet-700 hover:bg-violet-700 hover:text-white border-violet-700'}`} onClick={() => sendEmail()}>
-              <Send sx={{ fontSize: '2rem' }} />
-            </button>
+              <button aria-label='Send email' className={`flex rounded-xl border-2 py-2 px-4 mx-2 ${darkTheme ? 'text-white bg-violet-900 hover:bg-violet-700 hover:text-white border-violet-900' : 'text-violet-700 hover:bg-violet-700 hover:text-white border-violet-700'}`} onClick={() => sendEmail()}>
+                <Send sx={{ fontSize: '2rem' }} />
+              </button>
+            </label>
 
           </div>
         </blockquote>

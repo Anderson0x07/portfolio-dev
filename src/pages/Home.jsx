@@ -25,7 +25,7 @@ function Home () {
       <Contact />
       <Footer />
 
-      <button id='arrowUp' className='scroll-to-top' onClick={scrollToTop}>
+      <button aria-label='Arrow Up' id='arrowUp' className='scroll-to-top' onClick={scrollToTop}>
         <ArrowUpward className='scroll-to-top-icon' />
       </button>
     </>

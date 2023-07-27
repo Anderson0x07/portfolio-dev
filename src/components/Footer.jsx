@@ -1,5 +1,5 @@
 import { Email, GitHub, LinkedIn } from '@mui/icons-material'
-import { Container, Stack, Typography } from '@mui/material'
+import { Container, Stack } from '@mui/material'
 
 const urlImg = 'https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/'
 
@@ -27,6 +27,7 @@ const SocialButtons = () => {
       {socials.map((item) => {
         return (
           <button
+            aria-label={item.id}
             className='rounded-full  hover:bg-white hover:text-violet-700 p-2 border'
             key={item.id}
             onClick={() => window.open(item.url, '_blank')}
@@ -59,16 +60,16 @@ const Footer = () => {
           alt='Footer img'
         />
 
-        <Typography my={10} variant='h6'>
+        <h1 className='my-10 text-xl'>
           Living, learning, & leveling up one day at a time.
-        </Typography>
+        </h1>
 
         <SocialButtons />
 
-        <Typography my={10} variant='h8'>
+        <p className='my-10'>
           &copy; {new Date().getFullYear()} Anderson Orozco. All rights
           reserved.
-        </Typography>
+        </p>
       </Stack>
     </Container>
   )

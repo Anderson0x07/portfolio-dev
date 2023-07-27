@@ -50,7 +50,7 @@ const Navbar = () => {
         </div>
         <div className='flex lg:hidden'>
           <button
-            type='button'
+            aria-label='Menu'
             className={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 ${darkTheme ? 'text-white' : 'text-gray-700'}`}
             onClick={() => openMenu(true)}
           >
@@ -70,11 +70,12 @@ const Navbar = () => {
 
         </div>
         <div className='hidden lg:flex justify-end lg:gap-x-12 ml-10'>
-          <IconButton onClick={toggleTheme} sx={{ color: `${darkTheme ? 'white' : ''}` }}>
+          <IconButton aria-label='Theme' onClick={toggleTheme} sx={{ color: `${darkTheme ? 'white' : ''}` }}>
             {darkTheme ? <DarkMode sx={{ fontSize: '2rem' }} /> : <WbSunnyTwoTone sx={{ fontSize: '2rem' }} />}
           </IconButton>
 
           <button
+            aria-label='Resume'
             className={`pulse text-lg font-semibold rounded-full ${darkTheme ? 'text-white bg-violet-900 hover:bg-violet-700 hover:text-white py-2 px-4 border-2 border-violet-900' : 'text-violet-700 hover:bg-violet-700 hover:text-white py-2 px-4 border-2 border-violet-700'} `}
             onClick={() => window.open(urlCv, '_blank')}
           >
@@ -95,7 +96,7 @@ const Navbar = () => {
               />
             </a>
             <button
-              type='button'
+              aria-label='Close menu'
               className={`-m-2.5 rounded-md p-2.5 ${darkTheme ? 'text-white' : 'text-gray-700'}`}
               onClick={() => openMenu(false)}
             >
@@ -123,7 +124,7 @@ const Navbar = () => {
               </div>
               <div className='py-6'>
 
-                <IconButton style={{ color: `${darkTheme ? 'white' : ''}` }}>
+                <IconButton aria-label='Light Mode' style={{ color: `${darkTheme ? 'white' : ''}` }}>
                   <WbSunnyTwoTone sx={{ color: `${darkTheme ? 'white' : ''}`, fontSize: '2rem' }} />
                 </IconButton>
 
@@ -132,7 +133,7 @@ const Navbar = () => {
                   <span className='slider' />
                 </label>
 
-                <IconButton style={{ color: `${darkTheme ? 'white' : ''}` }}>
+                <IconButton aria-label='Dark Mode' style={{ color: `${darkTheme ? 'white' : ''}` }}>
                   <DarkMode sx={{ fontSize: '2rem' }} />
                 </IconButton>
               </div>
