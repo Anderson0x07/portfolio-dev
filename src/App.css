@@ -71,7 +71,7 @@ input:checked + .slider:before {
 }
 
 
-
+/*Buttons styles*/
 .swing:hover{
   animation-name: swing;
       -webkit-animation-name: swing;
@@ -80,17 +80,25 @@ input:checked + .slider:before {
       -webkit-animation-duration: 1s;
       -moz-animation-duration: 1s;
 }
+@keyframes swing {
+    20% {transform: rotate3d(0, 0, 1, 15deg);}
+    40% {transform: rotate3d(0, 0, 1, -10deg);}
+    60% {transform: rotate3d(0, 0, 1, 5deg);}
+    80% {transform: rotate3d(0, 0, 1, -5deg);}
+    to  {transform: rotate3d(0, 0, 1, 0deg);}
+}
 
-  @keyframes swing {
-      20% {transform: rotate3d(0, 0, 1, 15deg);}
-      40% {transform: rotate3d(0, 0, 1, -10deg);}
-      60% {transform: rotate3d(0, 0, 1, 5deg);}
-      80% {transform: rotate3d(0, 0, 1, -5deg);}
-      to  {transform: rotate3d(0, 0, 1, 0deg);}
-  }
-
-  
-              
+.pulse {
+  animation-name: pulse;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+          
 .shakeFix:hover{
   animation-name: shakefix;
       -webkit-animation-name: shakefix;
@@ -102,52 +110,20 @@ input:checked + .slider:before {
       -webkit-animation-iteration-count: infinite;
       -moz-animation-iteration-count: infinite;
 }
-
-  @keyframes shakefix {
-      0%  {transform: translate(1px, 1px);}
-      10% {transform: translate(-1px, -2px);}
-      20% {transform: translate(-3px, 0px);}
-      30% {transform: translate(3px, 2px);}
-      40% {transform: translate(1px, -1px);}
-      50% {transform: translate(-1px, 2px);}
-      60% {transform: translate(-3px, 1px);}
-      70% {transform: translate(3px, 1px);}
-      80% {transform: translate(-1px, -1px);}
-      90% {transform: translate(1px, 2px);}
-      100% {transform: translate(1px, -2px);}
-  }
+@keyframes shakefix {
+    0%  {transform: translate(1px, 1px);}
+    10% {transform: translate(-1px, -2px);}
+    20% {transform: translate(-3px, 0px);}
+    30% {transform: translate(3px, 2px);}
+    40% {transform: translate(1px, -1px);}
+    50% {transform: translate(-1px, 2px);}
+    60% {transform: translate(-3px, 1px);}
+    70% {transform: translate(3px, 1px);}
+    80% {transform: translate(-1px, -1px);}
+    90% {transform: translate(1px, 2px);}
+    100% {transform: translate(1px, -2px);}
+}
             
 
-  .transRight{
-    transition: .5s, color .10s;
-        -webkit-transition: .5s, color .10s;
-        -moz-transition: .5s, color .10s;
-}
-.transRight:hover{
-    transform: translatex(20px);
-        -webkit-transform: translatex(20px);
-        -moz-transform: translatex(20px);
-}
 
-.skewX{
-  transition: .5s, color .10s;
-      -webkit-transition: .5s, color .10s;
-      -moz-transition: .5s, color .10s;
-}
-.skewX:hover{
-  transform: skewX(30deg);
-      -webkit-transform: skewX(30deg);
-      -moz-transform: skewX(30deg);
-}
 
-.pulse {
-  animation-name: pulse;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes pulse {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.1);}
-  100% {transform: scale(1);}
-}
