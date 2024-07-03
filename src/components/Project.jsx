@@ -85,7 +85,7 @@ const Project = ({ title, img, tech, github, live, darkTheme, descripcion, image
 
       {imagenes ? 
         <>
-          <div className='mt-4 grid xl:grid-cols-3 md:grid-cols-3 justify-between gap-8'>
+          <div className='mt-4 grid xl:grid-cols-2 md:grid-cols-2 justify-between gap-8'>
             {
               imagenes.map((item, index) => {
                 return (

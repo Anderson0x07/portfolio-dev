@@ -62,7 +62,7 @@ const Projects = () => {
                 }
                 darkTheme={darkTheme}
                 descripcion='Web application for the management of processes and sales of the Caldero Chorreante restaurant, which allows waiters and administrators to perform different activities in a simple and fast way.'
-                imagenes={['restaurante-2.png', 'restaurante-3.png', 'restaurante-4.png']}
+                imagenes={['restaurante-5.png', 'restaurante-2.png', 'restaurante-3.png', 'restaurante-4.png']}
               />
 
             </Grid>
