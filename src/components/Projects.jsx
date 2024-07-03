@@ -52,7 +52,7 @@ const Projects = () => {
 
               <Project
                 title='Restaurante App'
-                img='restaurante-1.png'
+                img='restaurante-1.jpg'
                 tech={
                   [
                     { nombre: 'Angular', icono: 'angular.webp' },
