@@ -7,16 +7,19 @@ const Technologies = () => {
   const { darkTheme } = useTheme()
 
   const technologies = [
+    { url: 'angular.webp', alt: 'Angular' },
+    { url: 'primeng.webp', alt: 'PrimeNG' },
     { url: `${darkTheme ? 'react-dark.webp' : 'react.webp'}`, alt: 'React.js' },
     { url: 'js.webp', alt: 'Javascript' },
-    { url: 'css.svg', alt: 'CSS' },
-    { url: 'html.webp', alt: 'HTML' },
+    { url: 'tailwind.webp', alt: 'Material UI' },
+    { url: 'mui.webp', alt: 'Tailwind' },
     { url: `${darkTheme ? 'java-dark.webp' : 'java.webp'}`, alt: 'Java' },
-    { url: `${darkTheme ? 'github-dark.webp' : 'github.webp'}`, alt: 'Github' },
-    { url: 'mui.webp', alt: 'Material UI' },
-    { url: 'bootstrap.webp', alt: 'Bootstrap' },
     { url: 'spring-boot.webp', alt: 'Springboot' },
-    { url: 'angular.webp', alt: 'Angular' }
+    { url: 'node.webp', alt: 'Node JS' },
+    { url: 'html.webp', alt: 'HTML' },
+    { url: 'css.svg', alt: 'CSS' },
+    { url: `${darkTheme ? 'github-dark.webp' : 'github.webp'}`, alt: 'Github' },
+    { url: 'bootstrap.webp', alt: 'Bootstrap' }
   ]
 
   return (

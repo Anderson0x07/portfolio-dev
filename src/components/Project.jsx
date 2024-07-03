@@ -23,7 +23,7 @@ const handleShowPage = (arr) => {
   }
 }
 
-const Project = ({ title, img, tech, github, live, darkTheme }) => {
+const Project = ({ title, img, tech, github, live, darkTheme, descripcion, imagenes }) => {
   return (
 
     <div className={`px-1 pt-14 mx-auto lg:px-8 ${darkTheme ? 'text-white' : ''}`}>
@@ -53,29 +53,53 @@ const Project = ({ title, img, tech, github, live, darkTheme }) => {
         </div>
       </div>
 
-      <div className='flex items-center gap-8 pt-4'>
+      {descripcion ? <div className='mt-4 text-justify'> {descripcion} </div> : null}
 
-        <button
-          className={`swing px-6 py-2 border-2 rounded-lg ${darkTheme ? 'text-white border-violet-700 hover:bg-white hover:text-violet-800 hover:border-white' : 'text-violet-800 border-violet-700 hover:bg-violet-800 hover:border-violet-900 hover:text-white'}`}
-          onClick={() => handleShowPage(github)}
-        >
+      {github && live ? 
+        <div className='flex items-center gap-8 pt-4'>
+          <button
+            className={`swing px-6 py-2 border-2 rounded-lg ${darkTheme ? 'text-white border-violet-700 hover:bg-white hover:text-violet-800 hover:border-white' : 'text-violet-800 border-violet-700 hover:bg-violet-800 hover:border-violet-900 hover:text-white'}`}
+            onClick={() => handleShowPage(github)}
+          >
 
-          <div className='flex items-center gap-2'>
-            <GitHub />
-            <h2 className='text-lg'>GitHub</h2>
+            <div className='flex items-center gap-2'>
+              <GitHub />
+              <h2 className='text-lg'>GitHub</h2>
+            </div>
+          </button>
+
+          <button
+            className={`shakeFix px-6 py-2 border-2 rounded-lg ${darkTheme ? 'border-white hover:border-white hover:bg-white hover:text-black' : 'border-gray-700 hover:bg-gray-800 hover:border-gray-900 hover:text-white'}`}
+            onClick={() => window.open(live, '_blank')}
+          >
+
+            <div className='flex items-center gap-2'>
+              <InsertLink />
+              <h2 className='text-lg'>Live</h2>
+            </div>
+          </button>
+        </div>
+
+        : null
+      }
+
+      {imagenes ? 
+        <>
+          <div className='mt-4 grid xl:grid-cols-3 md:grid-cols-3 justify-between gap-8'>
+            {
+              imagenes.map((item, index) => {
+                return (
+                  <ImagenEstilo key={index} loading='lazy' src={urlImg + item} alt={title} />
+                )
+              })
+            }
+
           </div>
-        </button>
-        <button
-          className={`shakeFix px-6 py-2 border-2 rounded-lg  ${darkTheme ? 'border-white hover:border-white hover:bg-white hover:text-black' : 'border-gray-700 hover:bg-gray-800 hover:border-gray-900 hover:text-white'}`}
-          onClick={() => window.open(live, '_blank')}
-        >
+          <hr class='border border-solid mt-8' />
+        </>
+        : null
+      }
 
-          <div className='flex items-center gap-2'>
-            <InsertLink />
-            <h2 className='text-lg'>Live</h2>
-          </div>
-        </button>
-      </div>
     </div>
   )
 }

@@ -27,6 +27,7 @@ const Projects = () => {
                     ]
                 }
                 darkTheme={darkTheme}
+                descripcion='Web application for the management of bodyhealth gym processes in the city of Cúcuta, inventory management, sales, customers, employees and more. Created with React.js and Springboot.'
               />
             </Grid>
             <Grid item xs={12} sm={6} md={6}>
@@ -43,6 +44,43 @@ const Projects = () => {
                     ]
                 }
                 darkTheme={darkTheme}
+                descripcion='Task management website, which allows users to register, login, create, edit and delete tasks. Created with React.js, Node.js and MongoDB.'
+
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12}>
+
+              <Project
+                title='Restaurante App'
+                img='restaurante-1.png'
+                tech={
+                  [
+                    { nombre: 'Angular', icono: 'angular.webp' },
+                    { nombre: 'SpringBoot', icono: 'spring-boot.webp' },
+                    { nombre: 'MySQL', icono: 'mysql.webp' }
+                  ]
+                }
+                darkTheme={darkTheme}
+                descripcion='Web application for the management of processes and sales of the Caldero Chorreante restaurant, which allows waiters and administrators to perform different activities in a simple and fast way.'
+                imagenes={['restaurante-2.png', 'restaurante-3.png', 'restaurante-4.png']}
+              />
+
+            </Grid>
+            <Grid item xs={12} sm={6} md={6}>
+              <Project
+                title='Droguería App'
+                github={['https://github.com/Anderson0x07/medicamentos']}
+                live='https://medicamentos-micro.netlify.app/'
+                img='drogueria.png'
+                tech={
+                    [
+                      { nombre: 'Angular', icono: 'angular.webp' },
+                      { nombre: 'PrimeNG', icono: 'primeng.webp' },
+                      { nombre: 'MongoDB', icono: 'mongo.webp' }
+                    ]
+                }
+                darkTheme={darkTheme}
+                descripcion='Web application for the inventory management of a drugstore, which allows employees to perform different activities in a simple and fast way.'
               />
 
             </Grid>
@@ -60,6 +98,7 @@ const Projects = () => {
                     ]
                 }
                 darkTheme={darkTheme}
+                descripcion='Website that allows users to keep track of their expenses and income, which allows to add, edit and delete them. Created with React.js and Node.js.'
               />
 
             </Grid>
@@ -77,6 +116,7 @@ const Projects = () => {
                     ]
                 }
                 darkTheme={darkTheme}
+                descripcion='Website that allows users to see the price of cryptocurrencies in real time, which allows users to see the price of the most important cryptocurrencies in the market.'
               />
 
             </Grid>
@@ -94,10 +134,10 @@ const Projects = () => {
                     ]
                 }
                 darkTheme={darkTheme}
+                descripcion='Task management website, which allows users to create, edit and delete tasks. Created with React.js.'
               />
 
             </Grid>
-
           </Grid>
         </Container>
       </div>
