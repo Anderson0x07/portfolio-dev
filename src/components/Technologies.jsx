@@ -1,7 +1,7 @@
 import { Tooltip } from '@mui/material'
 import { useTheme } from '../context/Context'
 
-const urlImg = 'https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/'
+const urlImg = '/src/assets/'
 
 const Technologies = () => {
   const { darkTheme } = useTheme()
@@ -9,13 +9,17 @@ const Technologies = () => {
   const technologies = [
     { url: 'angular.webp', alt: 'Angular' },
     { url: 'primeng.webp', alt: 'PrimeNG' },
-    { url: `${darkTheme ? 'react-dark.webp' : 'react.webp'}`, alt: 'React.js' },
-    { url: 'js.webp', alt: 'Javascript' },
-    { url: 'tailwind.webp', alt: 'Material UI' },
-    { url: 'mui.webp', alt: 'Tailwind' },
     { url: `${darkTheme ? 'java-dark.webp' : 'java.webp'}`, alt: 'Java' },
     { url: 'spring-boot.webp', alt: 'Springboot' },
-    { url: 'node.webp', alt: 'Node JS' },
+    { url: `${darkTheme ? 'react-dark.webp' : 'react.webp'}`, alt: 'React.js' },
+    { url: `${darkTheme ? 'next-dark.webp' : 'next.webp'}`, alt: 'Next.js' },
+    { url: 'js.webp', alt: 'Javascript' },
+    { url: 'typescript.webp', alt: 'Typescript' },
+    { url: 'tailwind.webp', alt: 'Tailwind' },
+    { url: 'primeflex.webp', alt: 'Primeflex' },
+    { url: 'flowbite.webp', alt: 'Flowbite' },
+    { url: 'mui.webp', alt: 'Material UI' },
+    { url: 'node.webp', alt: 'Node.js' },
     { url: 'html.webp', alt: 'HTML' },
     { url: 'css.svg', alt: 'CSS' },
     { url: `${darkTheme ? 'github-dark.webp' : 'github.webp'}`, alt: 'Github' },
@@ -30,16 +34,16 @@ const Technologies = () => {
     >
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <h2 className='text-center text-3xl font-bold tracking-tight sm:text-4xl'>
-          Technologies
+          Tecnologías
         </h2>
-        <div className='mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5'>
+        <div className='mx-auto mt-10 w-full flex flex-wrap justify-center items-center gap-12 '>
           {technologies.map((technology) => {
             return (
               <Tooltip key={technology.alt} title={technology.alt} arrow>
                 <img
                   loading='lazy'
                   key={technology.alt}
-                  className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
+                  className='max-h-12 object-contain'
                   src={urlImg + technology.url}
                   alt={technology.alt}
                 />

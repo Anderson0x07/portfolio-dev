@@ -1,7 +1,7 @@
 import { GitHub, InsertLink } from '@mui/icons-material'
 import { Tooltip, styled } from '@mui/material'
 
-const urlImg = 'https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/'
+const urlImg = '/src/assets/'
 
 const ImagenEstilo = styled('img')({
   maxWidth: '100%',
@@ -30,23 +30,26 @@ const Project = ({ title, img, tech, github, live, darkTheme, descripcion, image
 
       <ImagenEstilo loading='lazy' src={urlImg + img} alt={title} />
 
-      <div className='flex justify-between items-center pt-4'>
+      <div className='flex justify-between items-center gap-2 pt-4'>
 
         <h2 className='text-2xl font-bold tracking-tight'>
           {title}
         </h2>
 
-        <div className='flex'>
+        <div className='flex flex-wrap lg:flex-nowrap justify-end gap-1'>
           {
-            tech.map(item => {
+            tech.map((item, index) => {
+              const isEven = index % 2 === 0;
+
+              const bgColor = isEven ? 'bg-[#f3e8ff]' : 'bg-[#e0f2fe]'
+              const textColor = isEven ? 'text-[#9333ea]' : 'text-[#0284c7]'
               return (
-                <Tooltip key={item.nombre} title={item.nombre} arrow>
-                  <img
-                    src={urlImg + item.icono}
-                    className='max-h-8 object-contain mx-0.5'
-                    alt={item.nombre}
-                  />
-                </Tooltip>
+
+                <span key={index}
+                  className={`rounded-full px-2.5 py-0.5 text-sm font-semibold whitespace-nowrap ${bgColor} ${textColor}`}
+                >
+                  {item.nombre}
+                </span>
               )
             })
           }

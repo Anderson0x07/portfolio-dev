@@ -1,7 +1,7 @@
 import { Email, GitHub, LinkedIn } from '@mui/icons-material'
 import { Container, Stack } from '@mui/material'
 
-const urlImg = 'https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/'
+const urlImg = '/src/assets/'
 
 const SocialButtons = () => {
   const socials = [
@@ -23,12 +23,12 @@ const SocialButtons = () => {
   ]
 
   return (
-    <div className='flex justify-center items-center gap-8'>
+    <div className='flex justify-center items-center gap-8 '>
       {socials.map((item) => {
         return (
           <button
             aria-label={item.id}
-            className='rounded-full  hover:bg-white hover:text-violet-700 p-2 border'
+            className='rounded-full transition-colors ease-in-out duration-300 hover:bg-white hover:text-violet-700 p-2 border'
             key={item.id}
             onClick={() => window.open(item.url, '_blank')}
           >
@@ -61,14 +61,13 @@ const Footer = () => {
         />
 
         <h1 className='my-10 text-xl'>
-          Living, learning, & leveling up one day at a time.
+          Viviendo, aprendiendo y subiendo de nivel día a día.
         </h1>
 
         <SocialButtons />
 
         <p className='my-10'>
-          &copy; {new Date().getFullYear()} Anderson Orozco. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} Anderson Orozco. Todos los derechos reservados.
         </p>
       </Stack>
     </Container>

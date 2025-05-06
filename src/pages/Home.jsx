@@ -25,7 +25,7 @@ function Home () {
       <Contact />
       <Footer />
 
-      <button aria-label='Arrow Up' id='arrowUp' className='scroll-to-top' onClick={scrollToTop}>
+      <button aria-label='Arrow Up' id='arrowUp' className='transition-colors ease-in-out duration-300 scroll-to-top' onClick={scrollToTop}>
         <ArrowUpward className='scroll-to-top-icon' />
       </button>
     </>
