@@ -1,7 +1,7 @@
 import { Tooltip } from '@mui/material'
 import { useTheme } from '../context/Context'
 
-const urlImg = '/src/assets/'
+const urlImg = 'https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/'
 
 const Technologies = () => {
   const { darkTheme } = useTheme()

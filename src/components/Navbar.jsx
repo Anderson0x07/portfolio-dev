@@ -8,7 +8,7 @@ import { useTheme } from '../context/Context'
 
 const urlCv = 'https://drive.google.com/file/d/1wGOkwvzrb_Sa-u2jIgERNxqKYneFWJy2/view?usp=sharing'
 
-const urlImg = '/src/assets/'
+const urlImg = 'https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/'
 
 const Navbar = () => {
   const { darkTheme, toggleTheme } = useTheme()

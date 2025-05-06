@@ -1,7 +1,7 @@
 import { GitHub, InsertLink } from '@mui/icons-material'
-import { Tooltip, styled } from '@mui/material'
+import { styled } from '@mui/material'
 
-const urlImg = '/src/assets/'
+const urlImg = 'https://raw.githubusercontent.com/Anderson0x07/portfolio-dev/main/src/assets/'
 
 const ImagenEstilo = styled('img')({
   maxWidth: '100%',
